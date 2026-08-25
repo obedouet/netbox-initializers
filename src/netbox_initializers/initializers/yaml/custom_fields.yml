@@ -32,6 +32,7 @@
 #   on_objects:
 #   - dcim.models.Device
 #   - dcim.models.Rack
+#   - dcim.models.RackType
 #   - dcim.models.Site
 #   - dcim.models.DeviceType
 #   - ipam.models.IPAddress
@@ -57,16 +58,18 @@
 #   required: false
 #   filter_logic: exact
 #   weight: 30
-#   default: First Item
+#   default: first
 #   is_cloneable: true
 #   on_objects:
 #   - dcim.models.Device
-#   choices:
-#   - First Item
-#   - Second Item
-#   - Third Item
-#   - Fifth Item
-#   - Fourth Item
+#   # choice_set entries are [value, label] pairs. A plain value may also be
+#   # given, in which case it is used as both the value and the label.
+#   choice_set:
+#   - [first, First Item]
+#   - [second, Second Item]
+#   - [third, Third Item]
+#   - [fourth, Fourth Item]
+#   - [fifth, Fifth Item]
 # boolean_field:
 #   type: boolean
 #   label: Yes Or No?
@@ -100,7 +103,7 @@
 #   filter_logic: loose
 #   on_objects:
 #   - dcim.models.Location
-#   object_type: ipam.models.IPAddress
+#   related_object_type: ipam.models.IPAddress
 # object_field:
 #   type: object
 #   label: ASN
@@ -109,4 +112,4 @@
 #   filter_logic: loose
 #   on_objects:
 #   - dcim.models.Device
-#   object_type: ipam.models.ASN
+#   related_object_type: ipam.models.ASN

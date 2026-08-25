@@ -1,15 +1,26 @@
+# test_superuser:
+#   first_name: Test
+#   last_name: Admin
+#   token:
+#     key: ifiap3Roh1oh # Random identifier (12 characters) for the token, but not secret.  #gitleaks:allow
+#     value: aexophoo0Aizoo2aithi2aofeice7EeMe9shizei6Eghieghoh # must be looooong!  #gitleaks:allow
+#   is_active: true
+#   is_superuser: true
+#   email: admin@example.com
 # technical_user:
-#   api_token: 0123456789technicaluser789abcdef01234567 # must be looooong!
+#   token:
+#     key: Xaeboophoo8e # Random identifier (12 characters) for the token, but not secret.  #gitleaks:allow
+#     value: 0123456789technicaluser789abcdef01234567 # must be looooong!  #gitleaks:allow
 # reader:
-#   password: reader
+#   password: reader  #gitleaks:allow
 # writer:
-#   password: writer
-#   api_token: "" # a token is generated automatically unless the value is explicity set to empty
+#   password: writer  #gitleaks:allowt
 # jdoe:
 #   first_name: John
 #   last_name: Doe
-#   api_token: 0123456789jdoe789abcdef01234567jdoe
+#   token:
+#     key: Ohje7giet3uT # Random identifier (12 characters) for the token, but not secret.  #gitleaks:allow
+#     value: 0123456789jdoe789abcdef01234567jdoe #gitleaks:allow
 #   is_active: True
 #   is_superuser: False
-#   is_staff: False
 #   email: john.doe@example.com
